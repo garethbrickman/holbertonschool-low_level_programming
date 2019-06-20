@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -o CFILE.s CFILE
+gcc -S -o =$CFILE.s =$CFILE
