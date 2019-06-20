@@ -1,2 +1,2 @@
-B#!/bin/bash
+#!/bin/bash
 gcc -S -o $=CFILE.s $=CFILE
