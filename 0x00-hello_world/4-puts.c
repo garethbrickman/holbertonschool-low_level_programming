@@ -1,12 +1,11 @@
 /** this is a short  description for a program to print plain text */
 #include<stdio.h>
-/*
- * main description: main
- *
- * main to return: 0
+/**
+ * main - takes unspecificed number of arguments and returns value on
+ * Description: longer things about the main function
+ * Return: 0
  */
 int main(void)
-/** description of function int main */
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
