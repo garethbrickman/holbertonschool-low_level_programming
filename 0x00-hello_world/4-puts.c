@@ -1,14 +1,12 @@
-/* this is a program to print plain text */
+/* this is a description for a program to print plain text */
 #include<stdio.h>
 /**
- * int main: to output strcpy using puts function
+ * int main description: to output strcpy using puts function
  *
- * return: 0
+ * main to  return: 0
  */
-int main()
+int main(void)
 {
-	char str1[50];
-	strcpy(str 1, "Programming is like building a multilingual puzzle);
-	puts(str1);
-	return(0);
+	puts ("\"Programming is like building a multilingual puzzle\n");
+	return (0);
 }
