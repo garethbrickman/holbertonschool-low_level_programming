@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc $CFIL -c -o $CFILE.o
