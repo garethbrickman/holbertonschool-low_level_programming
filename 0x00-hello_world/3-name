@@ -1,2 +1,2 @@
-#!/bin/bang
+#!/bin/bash
 gcc CFILE -o cisfun
