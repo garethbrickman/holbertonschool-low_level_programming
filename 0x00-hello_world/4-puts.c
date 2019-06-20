@@ -1,18 +1,14 @@
-/**
-* int main main prototype to output strcpy using puts function
-* Parameter defines char of text string
-*
-* Long description: xxx
-* Return: value will be 0
-*/
+/* this is a program to print plain text */
 #include<stdio.h>
-/* prints text*/
-int main(void)
-/* declarations: char str1
-*
-*/
+/**
+ * int main: to output strcpy using puts function
+ *
+ * return: 0
+ */
+int main()
 {
 	char str1[50];
-	strcpy (str1, "Programming is like building a multilingual puzzle");
-	return (0);
+	strcpy(str 1, "Programming is like building a multilingual puzzle);
+	puts(str1);
+	return(0);
 }
