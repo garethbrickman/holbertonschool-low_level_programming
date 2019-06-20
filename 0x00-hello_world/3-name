@@ -1,0 +1,2 @@
+#!/bin/bang
+gcc CFILE -o cisfun
