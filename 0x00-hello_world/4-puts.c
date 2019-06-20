@@ -5,8 +5,8 @@
  *
  * main to return: 0
  */
-/* description of function int main */
 int main(void)
+/** description of function int main */
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
