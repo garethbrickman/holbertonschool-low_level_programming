@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc main.c -c -o main.o
+gcc CFILE -c -o CFILE.o
