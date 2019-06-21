@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -fgnu-tm
+gcc -S -masm=intel $CFILE
