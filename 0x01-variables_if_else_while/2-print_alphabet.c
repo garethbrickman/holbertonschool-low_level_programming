@@ -5,7 +5,7 @@
  * Description: longer things about the main function
  * Return: 0
  */
-int main(void)
+char main(void)
 {
 	char al;
 
