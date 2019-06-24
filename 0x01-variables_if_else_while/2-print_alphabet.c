@@ -5,11 +5,13 @@
  * Description: longer things about the main function
  * Return: 0
  */
-char main(void)
+int main(void)
 {
-	char al;
+	int al;
 
 	for (al = 'a'; al <= 'z'; al++)
 		putchar(al);
 	putchar('\n');
+
+	return (0);
 }
