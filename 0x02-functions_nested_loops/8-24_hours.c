@@ -1,23 +1,19 @@
 #include "holberton.h"
 /**
- * print_last_digit - function computes last digit of number
+ * void jack_bauer - function writes every minute of hh:mm period
  *
- * @n:  integer number for n
+ * @void: void
  *
  * Return: 0
  */
-int print_last_digit(int n)
+void jack_bauer(void)
 {
-	if (n < 0)
-	{
-		(n = -1 * n);
-		(n = n % 10);
-		_putchar ('0' + n);
-	}
-	else
-	{
-		(n = n  % 10);
-		_putchar ('0' + n);
-	}
-	return (n);
+	int ho1;
+	int ho2;
+	int mi1;
+	int mi2;
+
+
+
+	return (0);
 }
