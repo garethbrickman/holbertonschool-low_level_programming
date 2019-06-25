@@ -1,8 +1,10 @@
 #include "holberton.h"
 /**
- * function  _islower - takes unspecificed number of arguments, returns value
- * Description: longer things about the int _islower(int c) function
- * Return: 0
+ * _islower -  filters Holberton input
+ *
+ * @c: char / ASCII character
+ *
+ * Return: 1 when true, 0 for all else
  */
 int _islower(int c)
 {
