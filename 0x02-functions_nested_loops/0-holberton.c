@@ -1,4 +1,3 @@
-/** this is a short description for a program*/
 #include "holberton.h"
 /**
  * main - takes unspecificed number of arguments and returns value
