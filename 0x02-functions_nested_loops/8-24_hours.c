@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- * void jack_bauer - function writes every minute of hh:mm period
+ * jack_bauer - void jack_bauer(void) function writes every minute of
+ *  hh:mm period
  *
  * @void: void
  *
@@ -8,12 +9,22 @@
  */
 void jack_bauer(void)
 {
-	int ho1;
-	int ho2;
-	int mi1;
-	int mi2;
+	int ho, mi;
 
-
-
-	return (0);
+	for (ho = 00; ho < 24; ho++)
+	{
+		for (mi = 00; mi < 60; mi++)
+		{
+			if (ho < 24 && mi < 60)
+			{
+				_putchar((ho / 10) + '0');
+				_putchar((ho % 10) + '0');
+				_putchar(':');
+				_putchar((mi / 10) + '0');
+				_putchar((mi % 10) + '0');
+				_putchar('\n');
+			}
+		}
+	}
+/*	return (0);*/
 }
