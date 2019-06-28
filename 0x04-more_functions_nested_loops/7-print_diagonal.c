@@ -2,26 +2,32 @@
 /**
  * print_diagonal - function outputs \
  *
- *@n: is int for \
+ *@n: is int
  *
  * Return: 0
  */
 
 void print_diagonal(int n)
 {
-	int ns;
+	int row, space;
 
-	for (ns = 0; ns < n; ns++)
+	if (n <= 0)
 	{
-		for (n = 0; n > 0; n++)
-		{
-			_putchar (92);
-		}
-		if (n <= 0)
-		{
-			_putchar ('\n');
-		}
-
+		_putchar('\n');
 	}
-			 _putchar ('\n');
+	else
+	{
+	for (row = 1; row <= n; row++)
+	{
+		for (space = 1; space <= n; space++)
+		{
+			if (space < row)
+			{
+				_putchar(' ');
+			}
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
+	}
 }
