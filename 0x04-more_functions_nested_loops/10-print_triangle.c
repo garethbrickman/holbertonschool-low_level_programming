@@ -17,21 +17,21 @@ void print_triangle(int size)
 	}
 	else
 	{
-	for (row = 1; row <= size; row++)
+	for (row = 0; row < size; row++)
 	{
-		for (space = 1; space <= size; space++)
+		for (space = (size - 1); space >= 0; space--)
 		{
-			if (space > row)
+			if (space <= row)
+			{
+				_putchar('#');
+			}
+			else
 			{
 				_putchar(' ');
 			}
-			else if (space < row)
-			{
-				_putchar('#');
 		}
-		_putchar('#');
+		_putchar('\n');
 	}
-	}
-	_putchar('\n');
+
 	}
 }
