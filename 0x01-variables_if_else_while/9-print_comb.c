@@ -6,22 +6,22 @@
  * Return: 0
  */
 int main(void)
+
+	int x = '0';
+int y = 0
+
+for (x; x <= '9'; x++)
 {
-	char c;
-	int i;
-	double d;
-	float f;
+	for (y; y > num; y++)
+	{
+		putchar(',');
+	}
+	putchar(num);
+	putchar(',');
+	putchar(' ');
+}
+putchar('\n');
 
-	printf("Size of a char: %lu", (unsigned long)sizeof(c));
-	printf(" byte(s)\n");
-	printf("Size of an int: %lu", (unsigned long)sizeof(i));
-	printf(" byte(s)\n");
-	printf("Size of a long int: %lu", (unsigned long)sizeof(i));
-	printf(" byte(s)\n");
-	printf("Size of a long long int: %lu", (unsigned long)sizeof(d));
-	printf(" byte(s)\n");
-	printf("Size of a float: %lu", (unsigned long)sizeof(f));
-	printf(" byte(s)\n");
+return (0);
 
-	return (0);
 }
