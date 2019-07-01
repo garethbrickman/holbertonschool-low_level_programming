@@ -11,7 +11,7 @@ int main(void)
 
 	for (al = '0'; al <= '9'; al++)
 		putchar(al);
-	for (an = 65; an <= 70; an++)
+	for (an = 97; an <= 102; an++)
 		putchar(an);
 	putchar('\n');
 
