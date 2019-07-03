@@ -11,14 +11,20 @@
 void print_rev(char *s)
 {
 
-	char *copy_s = s;
-	int dummy = 0;
+	char *length = s;
+	int end = length - 1;
+	int start = 0;
 
-	while (*copy_s != '\0')
+	while (*length != '\0')
 	{
-		dummy++;
-		copy_s++;
+		length++;
 	}
-	_putchar(dummy);
+	for (start != end && start > end; end--, start++)
+	{
+		length = *start
+			*start = *end
+			*end = length;
+	}
+	_putchar(
 	_putchar('\n');
 }
