@@ -8,23 +8,28 @@
  * Return: 0
  */
 
-void print_rev(char *s)
+int _strlen(char *s)
 {
+	char *copy_s = s;
+	int length = 0;
 
-	char *length = s;
-	int end = length - 1;
-	int start = 0;
-
-	while (*length != '\0')
+	while (*copy_s != '\0')
 	{
 		length++;
+		copy_s++;
 	}
-	for (start != end && start > end; end--, start++)
+	return (length);
+}
+
+void print_rev(char *s)
+{
+	int len = _strlen(s);
+	int count = len - 1;
+
+	while (count >= 0)
 	{
-		length = *start
-			*start = *end
-			*end = length;
+		_putchar(s[count]);
+		count--;
 	}
-	_putchar(
 	_putchar('\n');
 }

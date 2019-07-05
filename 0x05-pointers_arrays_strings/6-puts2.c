@@ -10,14 +10,21 @@
 
 void puts2(char *str)
 {
-	int even = *str;
+	int count = 0;
 
 	while (*str != '\0')
-		if (even % 2 == 0)
+	{
+		if (count % 2 == 0)
+		{
+			_putchar(*str);
+			str++;
+			count++;
+		}
+		else
 		{
 			str++;
-			even++;
-			_putchar(*str);
+			count++;
 		}
+	}
 	_putchar('\n');
 }
