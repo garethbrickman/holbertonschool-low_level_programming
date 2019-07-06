@@ -11,10 +11,35 @@
 
 char *_strcat(char *dest, char *src)
 {
-	while (*str)
+	int dest_len = _strlen(dest);
+	int i;
+	int n = _strlen(src);
+
+	for (i = 0 ; i < n && src[i] != '\0' ; i++)
+		dest[dest_len + i] = src[i];
+	dest[dest_len + i] = '\0';
+
+	return (dest);
+}
+
+/**
+ * _strlen - function returns length of a string
+ *
+ *@s: char pointer
+ *
+ * Return: length
+ *
+ */
+
+int _strlen(char *s)
+{
+	char *copy_s = s;
+	int length = 0;
+
+	while (*copy_s != '\0')
 	{
-		_putchar(*str);
-		str++;
+		length++;
+		copy_s++;
 	}
-	_putchar('\n');
+	return (length);
 }
