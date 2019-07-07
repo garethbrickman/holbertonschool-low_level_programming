@@ -10,11 +10,11 @@ int main(void)
 
 	for (num = '0'; num <= '9'; num++)
 	{
-		if (num < '1')
+		if (num <= '0')
 		{
 			putchar(num);
 		}
-		else if (num > '1')
+		else if (num > '0')
 		{
 			putchar(',');
 			putchar(' ');
