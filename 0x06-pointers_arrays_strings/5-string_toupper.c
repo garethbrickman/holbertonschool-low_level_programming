@@ -8,12 +8,11 @@
  * Return: char *
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *n)
 {
-	char n = *;
-
 	while (*n >= 'a' && *n <= 'z')
-		*n = ('A' - 'a');
-	n++;
-	return (char *);
+	{
+		*n = ('A' - 'a') + *n;
+	}
+	return (char *n);
 }
