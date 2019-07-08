@@ -10,9 +10,15 @@
 
 char *string_toupper(char *n)
 {
-	while (*n >= 'a' && *n <= 'z')
+	char *pn = n;
+
+	while (*pn != '\0')
 	{
-		*n = ('A' - 'a') + *n;
+		if (*pn >= 'a' && *n <= 'z')
+	{
+		*pn = ('A' - 'a') + *pn;
 	}
-	return (char *n);
+	pn++;
+	}
+	return (n);
 }
