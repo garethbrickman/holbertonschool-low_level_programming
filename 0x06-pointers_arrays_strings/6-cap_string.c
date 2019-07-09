@@ -18,7 +18,8 @@ char *cap_string(char *n)
 	{
 		for (count2 = 0; *(x + count2) != '\0'; count2++)
 		{
-			if (*(n + count - 1) == *(x + count2) && *(n + count) >= 'a' && *(n + count) <= 'z')
+			if (*(n + count - 1) == *(x + count2) && *(n + count) >=
+			    'a' && *(n + count) <= 'z')
 			{
 				*(n + count) = ('A' - 'a') + *(n + count);
 			}
