@@ -10,7 +10,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int returnbyte = 0;
+	unsigned int byte = 0;
 	int loop1 = 0;
 	int loop2 = 0;
 	int next = 0;
@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (*(accept + loop2) == *(s + loop1))
 			{
-				returnbyte++;
+				byte++;
 			}
 			if (*(accept + (loop2 + 1)) == *(s + (loop1)))
 			{
@@ -40,5 +40,5 @@ unsigned int _strspn(char *s, char *accept)
 			loop1++;
 			loop2 = 0;
 				}
-	return (returnbyte);
+	return (byte);
 }
