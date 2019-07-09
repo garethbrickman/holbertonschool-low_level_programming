@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include<stdio.h>
 /**
  * *cap_string - function capitalizes all words of a string
  *
@@ -10,15 +10,23 @@
 
 char *cap_string(char *n)
 {
-	int count = 0;
-	char *x = ".,{}()\n\t\"?!";
+	int count;
+	int count2;
+	char *x = " .,{}()\n\t\"?!";
 
-	for (; *(count + n) != '\0'; count++)
+	for (count = 0; *(n + count) != '\0'; count++)
+	{
+		for (count2 = 0; *(x + count2) != '\0'; count2++)
 		{
-			if ((*(count + n) - 1) == *x && *(n + count) >= 'a' && *(n + count) <= 'z')
+			if (*(n + count - 1) == *(x + count2) && *(n + count) >= 'a' && *(n + count) <= 'z')
 			{
-				*(count + n) = ('A' - 'a') + *(count + n);
+				*(n + count) = ('A' - 'a') + *(n + count);
+			}
+			else if ((count == 0) && *(n + count) >= 'a' && *(n + count) <= 'z')
+			{
+				*(n + count) = ('A' - 'a') + *(n + count);
 			}
 		}
-			return (n);
+	}
+	return (n);
 }

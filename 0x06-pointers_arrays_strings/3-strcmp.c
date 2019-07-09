@@ -11,8 +11,8 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	char * ps1 = s1;
-	char * ps2 = s2;
+	char *ps1 = s1;
+	char *ps2 = s2;
 
 	for (; *ps1 != '\0'; ps1++, ps2++)
 	{
