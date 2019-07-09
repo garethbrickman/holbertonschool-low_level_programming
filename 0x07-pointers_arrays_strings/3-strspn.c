@@ -23,19 +23,22 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				returnbyte++;
 			}
-			if (*(accept + loop2 + 1) == *(s + loop1 + 1))
+			if (*(accept + (loop2 + 1)) == *(s + (loop1)))
 			{
-				next = next + 1;
+				next = 1;
 			}
-			if (next == 1)
+			loop2++;
+		}
+			if (next != 1)
 			{
-				loop2++;
 				break;
 			}
-			else if (next != 1)
-				loop1++;
+			else if (next == 1)
+			{
+				next = 0;
+			}
+			loop1++;
 			loop2 = 0;
-		}
-	}
+				}
 	return (returnbyte);
 }
