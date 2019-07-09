@@ -13,6 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int returnbyte = 0;
 	int loop1 = 0;
 	int loop2 = 0;
+	int next = 0;
 
 	while (*(s + loop1))
 		{
@@ -22,10 +23,19 @@ unsigned int _strspn(char *s, char *accept)
 					{
 						returnbyte++;
 					}
-					loop2++;
-				}
+					if (*(accept + loop2 + 1) == *(s + loop1 + 1))
+					{
+						next = next + 1;
+					}
+					if (next == 1)
+					{
+						loop2++;
+					break;
+					}
+					else if (next != 1)
 			loop1++;
 			loop2 = 0;
+				}
 		}
 			return (returnbyte);
 }
