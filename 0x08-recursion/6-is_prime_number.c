@@ -15,7 +15,7 @@ int is_prime_number(int n)
 }
 
 /**
- * int factor - checks if number is prime
+ * factor - checks if number is prime
  *
  *@n: integer number
  *@x: integer number
