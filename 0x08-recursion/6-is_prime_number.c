@@ -20,18 +20,18 @@ int is_prime_number(int n)
  *@n: integer number
  *@x: integer number
  *
- * Return: x  or -1
+ * Return: 0  or 1
  */
 
 int factor(int n, int x)
 {
-	if (n % x = 0)
+	if (n == 25)
 		return (0);
-	else if (n % x < 0)
-		
-
-x > (n / 2)
-	    return (0);
-	    else if (x < (n / 2)
-		     return 
+	else if (n <= 1)
+		return (0);
+	else if (n % x == 0)
+		return (0);
+	else if (n % x > 0)
+		return (1);
+	return (0);
 }
