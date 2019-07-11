@@ -11,27 +11,21 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i;
-	int lengthN = _strlen(needle);
 
 	for (; *haystack != '\0'; haystack++)
 	{
-		for (i = 0; needle[i] != '\0'; i++)
+		if (haystack[i] == needle[i])
 		{
-			if (*(haystack + i) == needle[i])
+			for (i = 0; needle[i] != '\0'; i++)
 			{
-				if (i == (lengthN - 1))
-				{
-					return (haystack);
-				}
-				else
-				{
-					break;
-				}
+				return (haystack);
 			}
 		}
 	}
 	return (0);
 }
+
+
 
 /**
  * _strlen - function returns length of a string
