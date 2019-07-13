@@ -1,0 +1,1 @@
+This is a README for my 0x09-static_libraries project Bash files
