@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include<stdio.h>
 /**
- * main - function prints name of compiled exe file
+ * main - function prints name of itself
  *
  *@argc: int
  *@argv: char * pointer to array
@@ -11,6 +11,11 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
 	return (0);
 }
