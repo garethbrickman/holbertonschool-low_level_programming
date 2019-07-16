@@ -41,6 +41,8 @@ char *str_concat(char *s1, char *s2)
 			pstr[s1len + x] = s2[x];
 		}
 		if (pstr)
-		return (pstr);
+		{
+			return (pstr);
+		}
 		return (NULL);
 }
