@@ -28,6 +28,10 @@ char *_strdup(char *str)
 	mallen = len + 1;
 
 	pstr2 = malloc(sizeof(char) * mallen);
+	if (!pstr2)
+	{
+		return (NULL);
+	}
 	if (str == NULL)
 	{
 		return (NULL);
@@ -45,4 +49,5 @@ char *_strdup(char *str)
 		*pstr2 = *str;
 		return (pstr22);
 	}
+	free(pstr22);
 }
