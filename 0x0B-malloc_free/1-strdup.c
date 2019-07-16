@@ -20,6 +20,10 @@ char *_strdup(char *str)
 	int len = 0;
 	int mallen;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (*pstr != '\0')
 	{
 		len++;
@@ -29,10 +33,6 @@ char *_strdup(char *str)
 
 	pstr2 = malloc(sizeof(char) * mallen);
 	if (!pstr2)
-	{
-		return (NULL);
-	}
-	if (str == NULL)
 	{
 		return (NULL);
 	}
