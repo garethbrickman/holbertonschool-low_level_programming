@@ -1,0 +1,1 @@
+This is a README for my 0-malloc_checked.c project
