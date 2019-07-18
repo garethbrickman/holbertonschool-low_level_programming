@@ -3,7 +3,7 @@
 #include<stdlib.h>
 
 /**
- * *string_concat - function concatenates two strings
+ * *string_nconcat - function concatenates two strings
  *
  *@s1: char pointer
  *@s2: char pointer
