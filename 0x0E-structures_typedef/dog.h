@@ -1,7 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
-(struct dog *d, char *name, float age, char *owner);
-
+/*Structs*/
 /**
  * struct dog - contains data for dog
  * @name: char *
@@ -15,4 +14,7 @@ struct dog
 	float age;
 	char *owner;
 };
+/*Protos*/
+void init_dog(struct dog *d, char *name, float age, char *owner);
+/*Typeds*/
 #endif
