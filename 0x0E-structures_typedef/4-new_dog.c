@@ -20,8 +20,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (lenname = 0; name[lenname] != '\0'; lenname++)
 		;
+	lenname++;
 	for (lenowner = 0; owner[lenowner] != '\0'; lenowner++)
 		;
+	lenowner++;
 	pname = malloc(sizeof(char) * lenname);
 	if (pname == NULL)
 		free(pname);
