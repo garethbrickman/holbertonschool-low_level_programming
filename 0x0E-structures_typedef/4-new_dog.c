@@ -25,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	pname = malloc(sizeof(char) * lenname);
 	if (pname == NULL)
 		free(pname);
-	powner = malloc (sizeof(char) * lenowner);
+	powner = malloc(sizeof(char) * lenowner);
 	if (powner == NULL)
 		free(powner);
 	pdog = malloc(sizeof(dog_t));
