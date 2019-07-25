@@ -1,7 +1,7 @@
 #include"3-calc.h"
 #include<stdio.h>
 #include<stdlib.h>
-
+#include<string.h>
 /**
  * get_op_func - function finds function for operator sign
  *
@@ -12,7 +12,6 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	int strcmp(const char *str1, const char *str2);
 
 	op_t ops[] = {
 		{"+", op_add},
