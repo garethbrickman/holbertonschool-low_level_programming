@@ -6,12 +6,12 @@
  * main - function prints the opcodes of its own main function
  *
  *@argc: int
- *@argv * pointer
+ *@argv: * pointer
  *
  * Return: 0
  */
 
-int main (int argc, **char argv)
+int main(int argc, **char argv)
 {
 	if (argc != 2)
 	{
