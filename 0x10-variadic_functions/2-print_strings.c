@@ -25,12 +25,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-		printf("%s", x);
-		if (i < (n - 1) && separator)
+		else
 		{
-			printf("%s", separator);
+			printf("%s", x);
+			if (i < (n - 1) && separator)
+			{
+				printf("%s", separator);
+			}
 		}
+		va_end(list);
+		printf("\n");
 	}
-	va_end(list);
-	printf("\n");
-}
