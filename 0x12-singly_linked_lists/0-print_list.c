@@ -5,7 +5,7 @@
  *
  *@h: const list_t pointet to head of list
  *
- * Return: void
+ * Return: number of nodes
  */
 
 size_t print_list(const list_t *h)
