@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_lists - function prints all elements of list_t list
+ * print_list - function prints all elements of list_t list
  *
  *@h: const list_t pointet to head of list
  *
@@ -10,27 +10,19 @@
 
 size_t print_list(const list_t *h)
 {
-	va_list list;
-	unsigned int i;
-	char *x;
+	int x;
 
-	va_start(list, n);
-	for (i = 0; i < n; i++)
+	for (x = 0; h != NULL; x++)
 	{
-		x = va_arg(list, char*);
-		if (x == NULL)
+		if (h->str == NULL)
 		{
-			printf("(nil)");
+			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("%s", x);
-			if (i < (n - 1) && separator)
-			{
-				printf("%s", separator);
-			}
+			printf("[%i] %s\n", h->len, h->str);
 		}
+		h = h->next;
 	}
-		va_end(list);
-		printf("\n");
+	return (x);
 }
