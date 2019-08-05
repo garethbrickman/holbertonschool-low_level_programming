@@ -15,23 +15,21 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *newhead = NULL;
 	int x;
 
-	if (str)
+	if (str == NULL)
+		return (NULL);
+	for (x = 0; nstr[x] != '\0'; x++)
 	{
-		for (x = 0; nstr[x] != '\0'; x++)
-		{
-			;
-		}
-		newhead = malloc(sizeof(list_t));
-		if (newhead == NULL)
-		{
-			free(nstr);
-			return (NULL);
-		}
-		newhead->str = nstr;
-		newhead->len = x;
-		newhead->next = *head;
-		*head = newhead;
-		return (newhead);
+		;
 	}
-	return (NULL);
+	newhead = malloc(sizeof(list_t));
+	if (newhead == NULL)
+	{
+		free(nstr);
+		return (NULL);
+	}
+	newhead->str = nstr;
+	newhead->len = x;
+	newhead->next = *head;
+	*head = newhead;
+	return (newhead);
 }
