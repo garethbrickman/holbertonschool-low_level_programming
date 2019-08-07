@@ -7,7 +7,7 @@
  *@idx: unsigned int index position
  *@n: int data
  *
- * Return: address of new element, or NULL if failed
+ * Return: address of new element or NULL if failed
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
