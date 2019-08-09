@@ -11,8 +11,16 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return countbits(n ^ m);
+	return (countbits(n ^ m));
 }
+
+/**
+ * countbits - function returns count of set bits
+ *
+ *@n: unsigned long int number input
+ *
+ * Return: count of set bits
+ */
 
 unsigned long int countbits(unsigned long int n)
 {
