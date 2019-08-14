@@ -13,15 +13,20 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char buf[468];
+	char *buf;
+	size_t bytes;
 
-	fd = open(filename, O_RDWR);
-
-	if (fd == -1 || filename == NULL)
+	if (filename == NULL)
 		return (0);
 
-	read(fd, buf, letters);
-	write(fd, buf, letters);
-	close (fd);
-	return (letters);
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+	buf = malloc(letters);
+	if (buf == NULL)
+		return (0);
+	bytes = read(fd, buf, letters);
+	write(STDOUT_FILENO, buf, letters);
+	close(fd);
+	return (bytes);
 }
