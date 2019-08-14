@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while (lread)
 	{
-		lread = read(fd1, buff, sizeof(buff));
+		lread = read(fd1, buff, 1024);
 		if (lread == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
