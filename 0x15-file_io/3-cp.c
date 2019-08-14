@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int fd1, fd2;
-	ssize_t lread, lwrite;
+	ssize_t lread, lwrite, cl1, cl2;
 	char buff[1024];
 
 	/*Check if arguments are present and correct amount*/
@@ -50,11 +50,11 @@ int main(int argc, char *argv[])
 		if (lwrite != lread)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-	close(fd1);
-	if (close(fd1) == -1)
+	cl1 = close(fd1);
+	if (cl1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1), exit(100);
-	close(fd2);
-	if (close(fd2) == -1)
+	cl2 = close(fd2);
+	if (cl2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2), exit(100);
 	return (0);
 }
