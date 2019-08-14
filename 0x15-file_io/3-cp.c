@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 	/*Open fd1 and fd2, error check*/
 	fd1 = open(argv[1], O_RDONLY);
-	if (fd1 < 0)
+	if (fd1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -33,28 +33,28 @@ int main(int argc, char *argv[])
 	fd2 = open(argv[2], O_CREAT | O_EXCL, 0664);
 	if (fd2 < 0)
 		fd2 = open(argv[2], O_TRUNC | O_WRONLY);
-	if (fd2 < 0)
+	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	/*Loop until length of read return of fd1 == 0*/
 	while (lread)
 	{
 		lread = read(fd1, buff, sizeof(buff));
-		if (lread < 0)
+		if (lread == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		lwrite = write(fd2, buff, lread);
-		if (lwrite < 0)
+		if (lwrite == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		if (lwrite != lread)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	cl1 = close(fd1);
 	if (cl1 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
 	cl2 = close(fd2);
 	if (cl2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);
 	return (0);
 }
