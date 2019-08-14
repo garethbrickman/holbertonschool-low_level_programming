@@ -50,8 +50,10 @@ int main(int argc, char *argv[])
 		if (lwrite != lread)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
+	close(fd1);
 	if (close(fd1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1), exit(100);
+	close(fd2);
 	if (close(fd2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2), exit(100);
 	return (0);
