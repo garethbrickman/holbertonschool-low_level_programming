@@ -18,9 +18,14 @@ int main(int argc, char *argv[])
 	/*Check if arguments are present and correct amount*/
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	if (argv[1] == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	/*Open fd1 and fd2, error check*/
 	fd1 = open(argv[1], O_RDONLY);
-	if (fd1 == -1)
+	if (fd1 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -28,19 +33,19 @@ int main(int argc, char *argv[])
 	fd2 = open(argv[2], O_CREAT | O_EXCL, 0664);
 	if (fd2 < 0)
 		fd2 = open(argv[2], O_TRUNC | O_WRONLY);
-	if (fd2 == -1)
+	if (fd2 < 0)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	/*Loop until length of read return of fd1 == 0*/
 	while (lread)
 	{
 		lread = read(fd1, buff, sizeof(buff));
-		if (lread == -1)
+		if (lread < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		lwrite = write(fd2, buff, lread);
-		if (lwrite == -1)
+		if (lwrite < 0)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		if (lwrite != lread)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
