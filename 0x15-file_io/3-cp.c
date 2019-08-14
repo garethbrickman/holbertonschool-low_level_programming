@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int fd1, fd2;
-	ssize_t lread, lwrite, cl1, cl2;
+	ssize_t lread, lwrite;
 	char buff[1024];
 
 	if (argc != 3)
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_CREAT | O_EXCL, 0664);
+	fd2 = open(argv[2], O_CREAT | O_EXCL | O_WRONLY, 0664);
 	if (fd2 < 0)
 		fd2 = open(argv[2], O_TRUNC | O_WRONLY);
 	if (fd2 == -1)
