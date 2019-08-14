@@ -27,7 +27,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		close(fd);
 		return (1);
 	}
-	/*find length of string to use as count in write*/
+	/*find length of string to use as count in write function*/
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
 	/*use fd as input for write instead of STDIN, len for count*/
@@ -36,6 +36,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	/*remember to close!*/
 	close(fd);
-	/*returning 1 for success, but may need additional error check*/
+	/*returning 1 for success, but may need additional error checks*/
 	return (1);
 }

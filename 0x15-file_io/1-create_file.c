@@ -13,7 +13,6 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd, len, wryte;
 
-
 	/*check if arguments are present*/
 	if (filename == NULL)
 		return (-1);
