@@ -28,9 +28,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes = read(fd, buf, letters);
 	if (bytes < 1)
 		return (0);
-        wrytes = write(STDOUT_FILENO, buf, letters);
+	wrytes = write(STDOUT_FILENO, buf, bytes);
 	if (wrytes < 1)
 		return (0);
 	close(fd);
-	return (bytes);
+	return (wrytes);
 }
