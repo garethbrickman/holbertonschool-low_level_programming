@@ -1,1 +1,0 @@
-This is a README for my 0x19-stacks_queues_lifo_fifo project
