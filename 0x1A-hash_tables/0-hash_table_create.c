@@ -19,12 +19,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* allocate memory for  entries in hash table */
 	new_table->array = malloc(sizeof(hash_node_t *) * size);
-
-	/* set entries to NULL to be able to search properly */
-	while (x < size)
-	{
-		new_table->array[x] = NULL;
-		x++;
-	}
+	/* if (new_table->array = NULL) */
+	/* 	free(n */
+	/* /\* set entries to NULL to be able to search properly *\/ */
+	/* while (x < size) */
+	/* { */
+	/* 	new_table->array[x] = NULL; */
+	/* 	x++; */
+	/* } */
 	return (new_table);
 }
