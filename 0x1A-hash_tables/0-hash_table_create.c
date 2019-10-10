@@ -9,7 +9,7 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	/* unsigned long int x = 0; */
+	unsigned long int x = 0;
 
 	/* allocate memory for hash table, check if NULL */
 	hash_table_t *new_table = malloc(sizeof(hash_table_t));
@@ -19,13 +19,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* allocate memory for  entries in hash table */
 	new_table->array = malloc(sizeof(hash_node_t *) * size);
-	/* if (new_table->array = NULL) */
-	/* 	free(n */
-	/* /\* set entries to NULL to be able to search properly *\/ */
-	/* while (x < size) */
-	/* { */
-	/* 	new_table->array[x] = NULL; */
-	/* 	x++; */
-	/* } */
+	if (new_table->array == NULL)
+	{
+		free(new_table);
+		return(NULL);
+	}
+	/* set entries to NULL to be able to search properly */
+	while (x < size)
+	{
+		new_table->array[x] = NULL;
+		x++;
+	}
 	return (new_table);
 }
