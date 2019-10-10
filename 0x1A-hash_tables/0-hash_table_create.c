@@ -10,17 +10,20 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int x = 0;
-	/* allocate memory fo # table */
-	hash_table_t *new_table = malloc(sizeof(hash_table_t));
 
-	/* allocate memory for  entries in # table */
+	/* allocate memory for hash table, check if NULL */
+	hash_table_t *new_table = malloc(sizeof(hash_table_t));
+	if (new_table == NULL)
+		return (NULL);
+
+	/* allocate memory for  entries in hash table */
 	new_table->array = malloc(sizeof(hash_node_t *) * size);
+
 	/* set entries to NULL to be able to search properly */
 	while (x < size)
 	{
 		new_table->array[x] = NULL;
 		x++;
 	}
-
 	return (new_table);
 }
