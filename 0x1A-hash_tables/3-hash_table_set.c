@@ -26,17 +26,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		newnode->key = strdup(key);
 		newnode->value = strdup(value);
 		newnode->next = NULL;
+		return (1);
+	}
+
+	while (newnode != NULL)
+	{
+		if (strcmp(newnode->key, key) == 0)
+		{
+			free(newnode->value);
+			newnode->value = strdup(value);
+		}
+		newnode->next = newnode;
 	}
 	return (1);
-
-	/* while (newnode != NULL) */
-	/* { */
-	/* 	if (strcmp(newnode->key, key) == 0) */
-	/* 	{ */
-	/* 		free(newnode->value); */
-	/* 		newnode->value = strdup(value); */
-	/* 		return (1); */
-	/* 	} */
-	/* 	newnode = newnode->next; */
-	/* } */
 }
