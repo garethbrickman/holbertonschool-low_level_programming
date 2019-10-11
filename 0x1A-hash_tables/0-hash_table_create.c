@@ -25,6 +25,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(new_table);
 		return (NULL);
 	}
+	new_table->size = size;
 	/* set entries to NULL to be able to search properly */
 	while (x < size)
 	{
