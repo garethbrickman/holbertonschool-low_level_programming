@@ -27,11 +27,11 @@ void bubble_sort(int *array, size_t size)
 					array[inner] = array[inner + 1];
 					array[inner + 1] = temp;
 					swap = 1;
+					print_array(array, size);
 				}
 			}
 			if (!swap)
 				break;
-			print_array(array, size);
 		}
 	}
 }
