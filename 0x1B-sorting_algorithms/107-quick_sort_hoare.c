@@ -31,5 +31,6 @@ void quick_sort_hoare(int *array, size_t size)
 		}
 		quick_sort_hoare(array, i);
 		quick_sort_hoare(array + i, size - i);
+		print_array(array, size);
 	}
 }
