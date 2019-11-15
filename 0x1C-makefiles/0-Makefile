@@ -1,20 +1,2 @@
-.PHONY: all
-
 all:
-	gcc holberton.c main.c -o holberton
-
-
-
-
-# .PHONY = all
-
-# CC = gcc
-# DEPS = m.h
-# OBJ = holberton.o main.o
-# SRCS := $(wildcard *.c)
-# BINS := $(SRCS:%.c=%)
-
-# all: holberton
-
-# holberton: $(OBJ)
-# 	$(CC) -o $@ $^
+	gcc  main.c holberton.c -o holberton
