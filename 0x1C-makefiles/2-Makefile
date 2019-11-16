@@ -1,9 +1,9 @@
 .PHONY = all
 
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := $(SRC:.c=.o)
-NAME := holberton
+CC=gcc
+SRC=$(wildcard *.c)
+OBJ=$(SRC:.c=.o)
+NAME=holberton
 
 all: $(NAME)
 
@@ -12,3 +12,18 @@ $(NAME): $(OBJ)
 
 %.o: %.c
 	$(CC) -c -o $@ $<
+
+# .PHONY = all
+
+# CC=gcc
+# SRC=$(wildcard *.c)
+# OBJ=$(SRC:.c=.o)
+# NAME=holberton
+
+# all: $(NAME)
+
+# $(NAME): $(OBJ)
+# 	$(CC) $^ -o $@
+
+# %.o: %.c
+# 	$(CC) -c -o $@ $<
