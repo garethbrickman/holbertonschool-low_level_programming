@@ -1,9 +1,9 @@
 .PHONY = all
 
-CC=gcc
-SRC=$(wildcard *.c)
-OBJ=$(SRC:%.o=%)
-NAME=holberton
+CC := gcc
+SRC := $(wildcard *.c)
+OBJ := $(SRC:.c=.o)
+NAME := holberton
 
 all: $(NAME)
 
@@ -11,4 +11,4 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c
-	$(CC) -c $<
+	$(CC) -c $< -o $@
