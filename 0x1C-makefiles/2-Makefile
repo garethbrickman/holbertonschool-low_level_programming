@@ -1,8 +1,8 @@
 .PHONY = all
 
 CC=gcc
-SRC=main.c holberton.c
-OBJ=main.o holberton.o
+SRC=$(wildcard *.c)
+OBJ=$(SRC:%.o=%)
 NAME=holberton
 
 all: $(NAME)
