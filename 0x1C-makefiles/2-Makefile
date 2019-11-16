@@ -1,4 +1,4 @@
-.PHONY = all
+.PHONY = all $(NAME)
 
 CC=gcc
 SRC=main.c holberton.c
@@ -12,23 +12,3 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
-
-# SRC=main.c holberton.c
-
-# all:
-# 	$(CC) $(SRC) -o holberton
-
-# .PHONY = all
-
-# CC=gcc
-# SRC=main.c holberton.c
-# OBJ=$(SRC:.c=.o)
-# NAME=holberton
-
-# all: $(NAME)
-
-# $(NAME): $(OBJ)
-# 	$(CC) $^ -o $@
-
-# %.o: %.c
-# 	$(CC) -c -o $@ $<
