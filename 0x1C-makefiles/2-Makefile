@@ -3,10 +3,11 @@
 CC=gcc
 SRC=main.c holberton.c
 OBJ=main.o holberton.o
-DEPS = m.h
 NAME=holberton
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $<
-all: $(OBJ)
-	$(CC) -o $(NAME) $^
+all: $(NAME)
+
+%.o: %.c %.h
+	$(CC) -c $^
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
