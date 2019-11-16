@@ -1,22 +1,27 @@
 .PHONY = all
 
 CC=gcc
-SRC=$(wildcard *.c)
+SRC=main.c holberton.c
 OBJ=$(SRC:.c=.o)
 NAME=holberton
 
 all: $(NAME)
 
+%.o: %.c %.h
+	$(CC) -c $^
+
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
-%.o: %.c
-	$(CC) -c -o $@ $<
+# SRC=main.c holberton.c
+
+# all:
+# 	$(CC) $(SRC) -o holberton
 
 # .PHONY = all
 
 # CC=gcc
-# SRC=$(wildcard *.c)
+# SRC=main.c holberton.c
 # OBJ=$(SRC:.c=.o)
 # NAME=holberton
 
