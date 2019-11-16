@@ -1,14 +1,14 @@
 .PHONY = all
 
 CC := gcc
-SRC := main.c holberton.c
+SRC := $(wildcard *.c)
 OBJ := $(SRC:.c=.o)
 NAME := holberton
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $^ -o $@
 
 %.o: %.c
 	$(CC) -c -o $@ $<
