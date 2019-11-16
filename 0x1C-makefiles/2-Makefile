@@ -7,7 +7,8 @@ NAME=holberton
 
 all: $(NAME)
 
-%.o: %.c %.h
-	$(CC) -c $^
 $(NAME): $(OBJ)
-	$(CC) $^ -o $@
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	$(CC) -c $<
