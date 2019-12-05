@@ -9,8 +9,19 @@
 
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	if (node == NULL || node->parent == NULL)
-		return (NULL);
+	while (node)
+	{
+		if (!node->parent)
+			return (NULL);
 
+		if (!node->parent->right || !node->parent->left)
+			return (NULL);
 
+		if (node == node->parent->right)
+			return (node->parent->left);
+
+		if (node == node->parent->left)
+			return (node->parent->right);
+	}
+	return (NULL);
 }
