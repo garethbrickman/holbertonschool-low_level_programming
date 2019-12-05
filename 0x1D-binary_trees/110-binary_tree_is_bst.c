@@ -11,6 +11,9 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	const binary_tree_t *prev = NULL;
 
+	if (!tree)
+		return (0);
+
 	return (bst_util(tree, prev));
 }
 
