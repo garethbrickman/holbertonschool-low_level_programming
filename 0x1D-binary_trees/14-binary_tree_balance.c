@@ -8,13 +8,14 @@
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
+	int cnt1 = 0;
+	int cnt2 = 0;
 
 	const binary_tree_t *tmp2;
 	const binary_tree_t *tmp1;
 
 	tmp1 = tree;
 	tmp2 = tree;
-	int cnt2, cnt1 = 0;
 
 	if (tree == NULL)
 		return (0);
@@ -30,5 +31,4 @@ int binary_tree_balance(const binary_tree_t *tree)
 	}
 
 	return (cnt2 - cnt1);
-
 }
